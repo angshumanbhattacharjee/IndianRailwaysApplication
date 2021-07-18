@@ -1,9 +1,11 @@
 package com.indianrailways.trains.batch.model;
 
 import lombok.*;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Document
 @Getter
@@ -14,8 +16,9 @@ import java.io.Serializable;
 @ToString
 public class Train implements Serializable {
 
-    private String trainName;
+    @Id
     private String trainNumber;
+    private String trainName;
     private String returnTrainNumber;
     private String trainType;
     private String fromStationCode;
@@ -27,4 +30,5 @@ public class Train implements Serializable {
     private String distanceInKilometers;
     private String durationInHours;
     private String railwayZone;
+    private List<String> stationsInRoute;
 }

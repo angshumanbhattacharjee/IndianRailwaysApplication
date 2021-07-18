@@ -1,0 +1,14 @@
+spring:
+  profiles: default
+  application:
+    name: train-api-batch-processing
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: Indian-Railways
+logging:
+  level:
+    root: INFO
+server:
+  port: 9090
